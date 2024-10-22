@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Carrusel de Imágenes</title>
+    <style>
+       
+    </style>
+    <link rel="stylesheet" href="kalo.css">
+</head>
+<body>
+
+<div class="carrusel">
+    <div class="carrusel-imagenes" id="carrusel">
+        <div class="carrusel-imagen">
+            <img src="media/AIRE.jpg" alt="Imagen 1">
+        </div>
+        <div class="carrusel-imagen">
+            <img src="media/cableado.jpg" alt="Imagen 2">
+        </div>
+        <div class="carrusel-imagen">
+            <img src="media/Instala.jpg" alt="Imagen 3">
+        </div>
+    </div>
+    <div class="botones">
+        <button class="boton" onclick="anterior()">❮</button>
+        <button class="boton" onclick="siguiente()">❯</button>
+    </div>
+</div>
+
+<<script>
+    let indice = 0;
+
+    function siguiente() {
+        const carrusel = document.getElementById('carrusel');
+        const totalImagenes = document.querySelectorAll('.carrusel-imagen').length;
+        indice = (indice + 1) % totalImagenes;
+        actualizarCarrusel(carrusel);
+    }
+
+    function anterior() {
+        const carrusel = document.getElementById('carrusel');
+        const totalImagenes = document.querySelectorAll('.carrusel-imagen').length;
+        indice = (indice - 1 + totalImagenes) % totalImagenes;
+        actualizarCarrusel(carrusel);
+    }
+
+    function actualizarCarrusel(carrusel) {
+        const desplazamiento = -indice * 100;
+        carrusel.style.transform = `translateX(${desplazamiento}%)`;
+    }
+
+    // Movimiento automático
+    setInterval(siguiente, 3000); // Cambia de imagen cada 3 segundos
+</script>
+
+</body>
+</html>
