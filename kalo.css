@@ -1,0 +1,40 @@
+body {
+    font-family: Arial, sans-serif;
+}
+.carrusel {
+    position: relative;
+    width: 100%;
+    max-width: auto;
+    margin: 0;
+    overflow: hidden;
+    border: 2px solid #ddd;
+    border-radius: 5px;
+    height: 700px;
+}
+.carrusel-imagenes {
+    display: flex;
+    transition: transform 1s ease-in-out;
+}
+.carrusel-imagen {
+    min-width: 100%;
+}
+.carrusel img {
+    width: 100%;
+    border-radius: 5px;
+}
+.botones {
+    position: absolute;
+    top: 50%;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    transform: translateY(-50%);
+}
+.boton {
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+    border-radius: 5px;
+}
