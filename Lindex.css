@@ -116,7 +116,7 @@ header a:hover{
 .carousel-images {
     display: flex;
     transition: transform 0.4s ease;
-    width: 100%;
+    width: 90%;
     height: auto; /* Asegura que las imágenes ocupen el espacio del carrusel */
 }
 
