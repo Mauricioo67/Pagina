@@ -1,40 +1,433 @@
-body {
-    font-family: Arial, sans-serif;
-}
-.carrusel {
-    position: relative;
-    width: 100%;
-    max-width: auto;
-    margin: 0;
+.tarjetas{
+    width: 500px;
+    margin: 0px 120px;
+    border-radius: 16px;
     overflow: hidden;
-    border: 2px solid #ddd;
-    border-radius: 5px;
-    height: 700px;
+    background: #ffffff;
+    box-shadow: 0px 1px 1000px rgba(0, 68, 255, 0.2);
+    cursor: default;
+    transition: all 500ms ease;
 }
-.carrusel-imagenes {
+.tarjetas:hover{
+    box-shadow: 5px 5px 20px rgba(17, 0, 255, 0.4);
+    transform: translateY(-5%);
+}
+.tarjetas img{
+    width: 100%;
+    margin: auto;
+    height: 230px;
+}
+.tarjetas .contenido{
+    padding: 0px;
+    height: 310px;
+    text-align: center;
+    margin: 20px;
+}
+.tarjetas .contenido p{
+    line-height: 1;
+    color: #77288f;
+    text-align: center;
+}
+.tarjetas .contenido h3{
+    font-weight: bold;
+    margin-bottom: 15px;
+}
+.tarjetas .contenido a{
+    text-decoration: none;
+    display: inline-block;
+    padding: 15px;
+    margin-top: 5px;
+    color: #2f02f7;
+    border: 2px solid #c402ff;
+    border-radius: 10px;
+    transition: all 500ms ease;
+    font-weight: bold;
+}
+.tarjetas .contenido a:hover{
+    background-color: #f5d8f2;
+}
+/*diseño responsive*/
+*{
+    padding: 0px;
+    margin: opx;
+    font-family: Century Gothic;
+}
+body{
+    background-color: #ededed;
+}
+.home{
     display: flex;
-    transition: transform 1s ease-in-out;
 }
-.carrusel-imagen {
-    min-width: 100%;
+.in-flex{
+    flex: 1;
+    padding: 25px;
 }
-.carrusel img {
-    width: 100%;
-    border-radius: 5px;
+.in-flex:first-child{
+    flex: 2; 
 }
-.botones {
-    position: absolute;
-    top: 50%;
-    width: 100%;
+/*quienes somoshtml*/
+/* Estilos para la sección de misión y visión */
+.mision-vision {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: 50px 0;
+    background-color: #2b2a2f;
+}
+
+.cuadro {
+    background-color: rgb(60, 18, 100);
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 30px;
+    width: 40%;
+    text-align: center;
+    transition: transform 0.3s;
+}
+
+.cuadro:hover {
+    transform: translateY(-10px);
+}
+
+.cuadro h3 {
+    color: #ffffff;
+    font-size: 1.5rem;
+    margin-bottom: 15px;
+}
+
+.cuadro p {
+    font-size: 1rem;
+    color: #ffffff;
+    line-height: 1.5;
+}
+
+/* Estilos para la sección de equipo */
+.team {
+    text-align: center;
+    padding: 50px;
+    background-color: #5c5c5c;
+}
+
+.team-title {
+    font-size: 2rem;
+    margin-bottom: 30px;
+    color: #fffdfd;
+}
+
+.team-container {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.team-member {
+    background-color: rgb(126, 11, 214);
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    width: 300px;
+    padding: 20px;
+    text-align: center;
+    transition: transform 0.3s;
+}
+
+.team-member:hover {
+    transform: translateY(-10px);
+}
+
+.team-img {
+    border-radius: 50%;
+    width: 150px;
+    height: 150px;
+    object-fit: cover;
+    margin-bottom: 15px;
+}
+
+.team-position {
+    font-weight: bold;
+    color: #ffffff;
+    margin-bottom: 10px;
+}
+
+.team-bio {
+    font-size: 0.9rem;
+    color: #ffffff;
+}
+/*solo contactanos*/
+.contact-form {
     display: flex;
     justify-content: space-between;
-    transform: translateY(-50%);
-}
-.boton {
-    background-color: rgba(0, 0, 0, 0.5);
-    color: white;
+    align-items: center;
+    padding: 60px;
+  }
+  
+  .form-section {
+    background-color: rgba(34, 0, 255, 0.555); /* Color amarillo */
+    padding: 10px;
+    width: 60%;
+  }
+  
+  .form-section h2 {
+    font-size: 45px;
+    margin-bottom: 25px;
+    color: rgb(255, 255, 255);
+    text-align: center;
+    padding: 0px;
+  }
+  
+  .form-section form {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .form-section label {
+    margin-bottom: 5px;
+    font-weight: bold;
+    color: #ffffff;
+  }
+  
+  .form-section input,
+  .form-section textarea {
+    margin-bottom: 20px;
+    padding: 10px;
+    font-size: 16px;
+    border: 2px solid #e100ff;
+    border-radius: 15px;
+  }
+  
+  .form-section button {
+    background-color: #ffffff;
+    color: #000000;
     border: none;
     padding: 10px;
+    font-size: 20px ;
     cursor: pointer;
-    border-radius: 5px;
+  }
+  
+  .form-section button:hover {
+    background-color: #d0c6fd;
+  }
+  
+  .social-section {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    gap: 10px;
+    width: 30%;
+    align-items: center;
+    justify-content: center;
+    margin: 35px;
+  }
+  
+  .social-section a {
+    margin-bottom: 20px;
+  }
+  
+  .social-section img {
+    width: 300px;
+    height: 300px;
+    transition: transform 0.3s;
+  }
+  
+  .social-section img:hover {
+    transform: scale(1.2);
+  }
+
+  /*SUBMENUS*/
+  .menu-principal {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+}
+
+.menu-principal li {
+    position: relative;
+    padding: 10px;
+}
+
+.menu-principal a {
+    text-decoration: none;
+    color: rgb(17, 0, 255);
+    font-weight: bold;
+    padding: 5px;
+    display: block;
+}
+
+/* Estilo para el submenú */
+.submenu {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background-color: #fff;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    border: 1px solid #ddd;
+}
+
+.submenu li {
+    width: 280px;
+}
+
+.submenu a {
+    padding: 10px;
+    color: #333;
+    text-decoration: none;
+    font-size: 25px;
+}
+
+.submenu a:hover {
+    background-color: #f0f0f0;
+}
+
+/* Mostrar submenú al pasar el ratón */
+.menu-desplegable:hover .submenu {
+    display: block;
+}
+
+/* Estilos adicionales */
+.menu-principal a:hover {
+    background-color: #e0e0e0;
+}
+nav a {
+    font-size: 25px; /* Ajusta el tamaño de la fuente del menú principal */
+    text-decoration: none;
+    color: rgb(125, 42, 233);; /* Color del texto */
+    font-family: 'Arial', sans-serif; /* Asegúrate de usar una fuente legible */
+}
+/* Ajustes generales para el menú */
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: rgb(245, 245, 245); /* Fondo del menú */
+}
+
+/* Cambios en el hover para mejor visibilidad */
+nav a:hover {
+    background-color: #f0f0f0; /* Fondo al pasar el ratón */
+    color: rgb(125, 42, 233); /* Color del texto al pasar el ratón */
+}
+/*responsive*/
+/* Estilos generales */
+
+
+.container {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+/* Estilos para móviles pequeños (pantallas hasta 600px) */
+@media (max-width: 600px) {
+    .container {
+        padding: 10px;
+    }
+
+    h1 {
+        font-size: 24px;
+    }
+
+    p {
+        font-size: 14px;
+    }
+
+    .hero {
+        background-size: cover;
+    }
+
+    /* Ajustes para botones o elementos pequeños */
+    .button {
+        font-size: 16px;
+        padding: 10px 15px;
+    }
+}
+
+/* Estilos para tablets (pantallas entre 601px y 768px) */
+@media (min-width: 601px) and (max-width: 768px) {
+    .container {
+        padding: 15px;
+    }
+
+    h1 {
+        font-size: 28px;
+    }
+
+    p {
+        font-size: 16px;
+    }
+
+    /* Ajuste de columnas en grid o flex */
+    .grid {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .button {
+        font-size: 18px;
+        padding: 12px 20px;
+    }
+}
+
+/* Estilos para pantallas medianas (pantallas entre 769px y 1024px) */
+@media (min-width: 769px) and (max-width: 1024px) {
+    .container {
+        padding: 20px;
+    }
+
+    h1 {
+        font-size: 32px;
+    }
+
+    p {
+        font-size: 18px;
+    }
+
+    .grid {
+        display: flex;
+        flex-direction: row;
+    }
+
+    .grid-item {
+        flex: 1;
+        margin: 10px;
+    }
+
+    .button {
+        font-size: 20px;
+        padding: 15px 25px;
+    }
+}
+
+/* Estilos para pantallas grandes (pantallas de más de 1024px) */
+@media (min-width: 1025px) {
+    .container {
+        padding: 30px;
+    }
+
+    h1 {
+        font-size: 36px;
+    }
+
+    p {
+        font-size: 20px;
+    }
+
+    .grid {
+        display: flex;
+        flex-direction: row;
+    }
+
+    .grid-item {
+        flex: 1;
+        margin: 15px;
+    }
+
+    .button {
+        font-size: 22px;
+        padding: 20px 30px;
+    }
 }

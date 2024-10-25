@@ -485,7 +485,7 @@ footer .container4{
 .Servicios{
     width: 100%;
     display: flex;
-    max-width: 4000px;
+    max-width: 100%;
 }
 .tarjetas{
     width: 100%;
@@ -799,3 +799,130 @@ nav a:hover {
     background-color: #f0f0f0; /* Fondo al pasar el ratón */
     color: rgb(125, 42, 233); /* Color del texto al pasar el ratón */
 }
+/*responsive*/
+/* Estilos generales */
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    box-sizing: border-box;
+}
+
+.container {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+/* Estilos para móviles pequeños (pantallas hasta 600px) */
+@media (max-width: 600px) {
+    .container {
+        padding: 10px;
+    }
+
+    h1 {
+        font-size: 24px;
+    }
+
+    p {
+        font-size: 14px;
+    }
+
+    .hero {
+        background-size: cover;
+    }
+
+    /* Ajustes para botones o elementos pequeños */
+    .button {
+        font-size: 16px;
+        padding: 10px 15px;
+    }
+}
+
+/* Estilos para tablets (pantallas entre 601px y 768px) */
+@media (min-width: 601px) and (max-width: 768px) {
+    .container {
+        padding: 15px;
+    }
+
+    h1 {
+        font-size: 28px;
+    }
+
+    p {
+        font-size: 16px;
+    }
+
+    /* Ajuste de columnas en grid o flex */
+    .grid {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .button {
+        font-size: 18px;
+        padding: 12px 20px;
+    }
+}
+
+/* Estilos para pantallas medianas (pantallas entre 769px y 1024px) */
+@media (min-width: 769px) and (max-width: 1024px) {
+    .container {
+        padding: 20px;
+    }
+
+    h1 {
+        font-size: 32px;
+    }
+
+    p {
+        font-size: 18px;
+    }
+
+    .grid {
+        display: flex;
+        flex-direction: row;
+    }
+
+    .grid-item {
+        flex: 1;
+        margin: 10px;
+    }
+
+    .button {
+        font-size: 20px;
+        padding: 15px 25px;
+    }
+}
+
+/* Estilos para pantallas grandes (pantallas de más de 1024px) */
+@media (min-width: 1025px) {
+    .container {
+        padding: 30px;
+    }
+
+    h1 {
+        font-size: 36px;
+    }
+
+    p {
+        font-size: 20px;
+    }
+
+    .grid {
+        display: flex;
+        flex-direction: row;
+    }
+
+    .grid-item {
+        flex: 1;
+        margin: 15px;
+    }
+
+    .button {
+        font-size: 22px;
+        padding: 20px 30px;
+    }
+}
+/*res*/
